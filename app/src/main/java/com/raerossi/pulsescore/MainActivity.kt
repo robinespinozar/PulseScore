@@ -59,6 +59,10 @@ class MainActivity : ComponentActivity() {
                         preferencePage = PreferencePage.Notifications,
                         preferenceList = convertTeamToPreference(list = getTeamList())
                     )
+                    PreferenceScreen(
+                        preferencePage = PreferencePage.Notifications,
+                        preferenceList = convertTeamToPreference(list = getTeamList())
+                    )
                     /*PreferenceScreen(
                         preferencePage = PreferencePage.Favorites,
                         preferenceList = convertTeamToPreference(list = getTeamList())
