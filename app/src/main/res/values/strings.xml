@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PulseScore</string>
+    <string name="first_onboarding_title">Sigue a tu equipo favorito</string>
+    <string name="first_onboarding_body">Apoya a tu equipo favorito en todos sus emocionantes encuentros deportivos. Mantente conectado y no te pierdas ni un solo momento de la acción.</string>
+    <string name="second_onboarding_title">Sigue los partidos minuto a minuto</string>
+    <string name="second_onboarding_body">Vive los partidos en tiempo real. Estarás siempre al tanto de cada momento crucial en los juegos que más te importan.</string>
+    <string name="third_onboarding_title">No olvides ningún partido</string>
+    <string name="third_onboarding_body">Programa recordatorios y mantente al tanto de todos los juegos, horarios y resultados en un solo lugar.</string>
+    <string name="welcome_title">Bienvenido a PulseScore </string>
+    <string name="welcome_body">Con esta aplicación podrás ver los marcadores en tiempo real de cualquier deporte. A continuación, vamos a seleccionar tus preferencias como ligas , equipos favoritos, etc..</string>
+    <string name="home">Home</string>
+    <string name="matches">Matches</string>
+    <string name="news">News</string>
+    <string name="profile">Profile</string>
+    <string name="real_madrid">Real Madrid</string>
+    <string name="barcelona">Barcelona</string>
+    <string name="liverpool">Liverpool</string>
+    <string name="manchester_city">Manchester City</string>
+    <string name="manchester_united">Manchester United</string>
+    <string name="milan">Milan</string>
+    <string name="inter_milan">Inter Milan</string>
+    <string name="newcastle">Newcastle</string>
+    <string name="juventus">Juventus</string>
+    <string name="arsenal">Arsenal</string>
+    <string name="favorites_title">Equipo favorito</string>
+    <string name="favorites_description">Selecciona tu equipo favorito del cual te gustaría saber todas las noticias relacionadas a este.</string>
+    <string name="notifications_title">Notificaciones</string>
+    <string name="notifications_description">Selecciona los equipos de los cuales te gustaría recibir notificaciones , como resultados en vivo o alertas cuando un partido esté por comenzar.</string>
+    <string name="competitions_title">Competiciones</string>
+    <string name="competitions_description">Selecciona tus ligas favoritas para estar al tanto de todos los resultados.</string>
+    <string name="premier_league">Premier League</string>
+    <string name="la_liga">La Liga</string>
+    <string name="bundesliga">Bundesliga</string>
+    <string name="serie_a">Serie A</string>
+    <string name="ligue_one">Ligue One</string>
+</resources>
