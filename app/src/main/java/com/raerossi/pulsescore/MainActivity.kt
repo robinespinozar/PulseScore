@@ -59,6 +59,7 @@ class MainActivity : ComponentActivity() {
                         preferencePage = PreferencePage.Notifications,
                         preferenceList = convertTeamToPreference(list = getTeamList())
                     )
+                    //MI CAMBIO COMENTARIO
                     /*PreferenceScreen(
                         preferencePage = PreferencePage.Favorites,
                         preferenceList = convertTeamToPreference(list = getTeamList())
