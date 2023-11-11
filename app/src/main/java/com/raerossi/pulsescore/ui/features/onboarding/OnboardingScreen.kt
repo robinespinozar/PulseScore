@@ -11,10 +11,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import com.raerossi.pulsescore.composeutils.TitleAndDescription
 import com.raerossi.pulsescore.ui.theme.PulseScoreTheme
 import com.raerossi.pulsescore.utils.OnBoardingPage
 
+@Composable
+fun OnBoardingScreen(navController: NavHostController){
+
+}
 
 @Composable
 fun PagerScreen(onBoardingPage: OnBoardingPage) {

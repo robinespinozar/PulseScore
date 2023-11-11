@@ -26,6 +26,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.raerossi.pulsescore.R
 import com.raerossi.pulsescore.composeutils.IconAndTextButton
 import com.raerossi.pulsescore.composeutils.InputField
@@ -49,7 +51,7 @@ import com.raerossi.pulsescore.utils.InputFieldColors
 /*TODO: Agregar Scroll para que funcione en devices con pantalla pequeña */
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavHostController) {
     Box(Modifier.fillMaxSize()) {
         LoginHeader(Modifier.align(Alignment.TopCenter))
         LoginBody(Modifier.align(Alignment.Center))
@@ -214,7 +216,8 @@ fun LoginScreenPreviews() {
                 .background(Color.White)
 
         ) {
-            LoginScreen()
+            val navigationController = rememberNavController()
+            LoginScreen(navigationController)
         }
     }
 }

@@ -8,7 +8,7 @@ sealed class PreferencePage(
     @StringRes val titleResId: Int,
     @StringRes val descriptionResId: Int,
 ) {
-    object Favorites: PreferencePage(
+    object Teams: PreferencePage(
         progressIndicator = 0.4f,
         titleResId = R.string.favorites_title,
         descriptionResId = R.string.favorites_description

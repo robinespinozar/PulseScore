@@ -13,6 +13,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.raerossi.pulsescore.R
 import com.raerossi.pulsescore.composeutils.PrimaryButton
 import com.raerossi.pulsescore.composeutils.TitleAndDescription
@@ -21,7 +23,7 @@ import com.raerossi.pulsescore.ui.theme.backgroundGradient
 
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navController: NavHostController) {
     Column(Modifier.background(backgroundGradient)) {
         WelcomeImage(Modifier.weight(1f))
         WelcomeTitleAndDescription()
@@ -71,6 +73,7 @@ fun ContinueButton(modifier: Modifier = Modifier) {
 @Composable
 fun WelcomeScreenPreview() {
     PulseScoreTheme {
-        WelcomeScreen()
+        val navigationController = rememberNavController()
+        WelcomeScreen(navigationController)
     }
 }

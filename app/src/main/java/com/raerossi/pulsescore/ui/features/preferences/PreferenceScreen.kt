@@ -30,6 +30,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.raerossi.pulsescore.R
 import com.raerossi.pulsescore.composeutils.FavoriteActions
 import com.raerossi.pulsescore.composeutils.ProgressTopBar
@@ -57,6 +59,7 @@ import com.raerossi.pulsescore.utils.Team
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PreferenceScreen(
+    navController: NavHostController,
     preferencePage: PreferencePage,
     preferenceList: List<PreferenceInfo>
 ) {
@@ -226,8 +229,10 @@ fun convertLeagueToPreference(
 @Composable
 fun FavoriteScreenPreview() {
     PulseScoreTheme {
+        val navigationController = rememberNavController()
         PreferenceScreen(
-            preferencePage = PreferencePage.Favorites,
+            navController = navigationController,
+            preferencePage = PreferencePage.Teams,
             preferenceList = convertTeamToPreference(list = getTeamList())
         )
     }
@@ -237,7 +242,9 @@ fun FavoriteScreenPreview() {
 @Composable
 fun NotificationScreenPreview() {
     PulseScoreTheme {
+        val navigationController = rememberNavController()
         PreferenceScreen(
+            navController = navigationController,
             preferencePage = PreferencePage.Notifications,
             preferenceList = convertTeamToPreference(list = getTeamList())
         )
@@ -248,7 +255,9 @@ fun NotificationScreenPreview() {
 @Composable
 fun CompetitionScreenPreview() {
     PulseScoreTheme {
+        val navigationController = rememberNavController()
         PreferenceScreen(
+            navController = navigationController,
             preferencePage = PreferencePage.Competitions,
             preferenceList = convertLeagueToPreference(list = getLeaguesList())
         )
