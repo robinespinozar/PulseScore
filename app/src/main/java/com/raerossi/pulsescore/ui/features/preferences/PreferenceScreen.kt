@@ -44,7 +44,7 @@ import com.raerossi.pulsescore.ui.theme.neutralVariant80
 import com.raerossi.pulsescore.ui.theme.title
 import com.raerossi.pulsescore.utils.League
 import com.raerossi.pulsescore.utils.PreferenceInfo
-import com.raerossi.pulsescore.utils.PreferencePage
+import com.raerossi.pulsescore.utils.PreferenceScreen
 import com.raerossi.pulsescore.utils.Team
 
 /* TODO: Esto debe ser mejorado PreferenceScreen debería de recibir
@@ -54,17 +54,17 @@ import com.raerossi.pulsescore.utils.Team
 /* TODO: Falta mejorar mucho, La parte de como administrar bien los PreferenceItems
 *   No me parece del todo correcto que isNotificationScreen administre los iconos de la Screen */
 //Puede mejorarse, tal vez crear un atributo en la clase
-//PreferencePage que me permita saber si debe de ir con 2 iconos o no
+//PreferenceScreen que me permita saber si debe de ir con 2 iconos o no
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PreferenceScreen(
     navController: NavHostController,
-    preferencePage: PreferencePage,
+    preferenceScreen: PreferenceScreen,
     preferenceList: List<PreferenceInfo>
 ) {
     Scaffold(
-        topBar = { ProgressTopBar(progress = preferencePage.progressIndicator) },
+        topBar = { ProgressTopBar(progress = preferenceScreen.progressIndicator) },
         bottomBar = { FavoriteActions() }
     ) { padding ->
         Column(
@@ -75,15 +75,15 @@ fun PreferenceScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             PreferenceHeader(
-                title = stringResource(id = preferencePage.titleResId),
-                description = stringResource(id = preferencePage.descriptionResId),
+                title = stringResource(id = preferenceScreen.titleResId),
+                description = stringResource(id = preferenceScreen.descriptionResId),
             )
             //Este if también me parece que está mal
             //me parece que debería ir en el PreferenceHeader
-            if (preferencePage == PreferencePage.Notifications) NotificationHeader()
+            if (preferenceScreen == PreferenceScreen.Notifications) NotificationHeader()
             PreferenceList(
                 preferenceList = preferenceList,
-                isNotificationScreen = preferencePage == PreferencePage.Notifications
+                isNotificationScreen = preferenceScreen == PreferenceScreen.Notifications
             )
         }
     }
@@ -232,7 +232,7 @@ fun FavoriteScreenPreview() {
         val navigationController = rememberNavController()
         PreferenceScreen(
             navController = navigationController,
-            preferencePage = PreferencePage.Teams,
+            preferenceScreen = PreferenceScreen.Teams,
             preferenceList = convertTeamToPreference(list = getTeamList())
         )
     }
@@ -245,7 +245,7 @@ fun NotificationScreenPreview() {
         val navigationController = rememberNavController()
         PreferenceScreen(
             navController = navigationController,
-            preferencePage = PreferencePage.Notifications,
+            preferenceScreen = PreferenceScreen.Notifications,
             preferenceList = convertTeamToPreference(list = getTeamList())
         )
     }
@@ -258,7 +258,7 @@ fun CompetitionScreenPreview() {
         val navigationController = rememberNavController()
         PreferenceScreen(
             navController = navigationController,
-            preferencePage = PreferencePage.Competitions,
+            preferenceScreen = PreferenceScreen.Competitions,
             preferenceList = convertLeagueToPreference(list = getLeaguesList())
         )
     }

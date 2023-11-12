@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">PulseScore</string>
-    <string name="first_onboarding_title">Sigue a tu equipo favorito</string>
-    <string name="first_onboarding_body">Apoya a tu equipo favorito en todos sus emocionantes encuentros deportivos. Mantente conectado y no te pierdas ni un solo momento de la acción.</string>
-    <string name="second_onboarding_title">Sigue los partidos minuto a minuto</string>
-    <string name="second_onboarding_body">Vive los partidos en tiempo real. Estarás siempre al tanto de cada momento crucial en los juegos que más te importan.</string>
-    <string name="third_onboarding_title">No olvides ningún partido</string>
-    <string name="third_onboarding_body">Programa recordatorios y mantente al tanto de todos los juegos, horarios y resultados en un solo lugar.</string>
+    <string name="first_onboarding_title">Favoritos</string>
+    <string name="first_onboarding_body">Añade tus equipos y competiciones favoritas para vivir la emoción al máximo. Mantente conectado y no te pierdas las novedades de tu interés.</string>
+    <string name="second_onboarding_title">Notificaciones</string>
+    <string name="second_onboarding_body">¡Sé el primero en enterarte de cada gol! Recibe notificaciones y mantente al tanto de los partidos y resultados</string>
+    <string name="third_onboarding_title">En Directo</string>
+    <string name="third_onboarding_body">¡Vive la emoción al máximo con los resultados actualizados en tiempo real! Estarás al tanto de cada momento crucial de los juegos.</string>
     <string name="welcome_title">Bienvenido a PulseScore </string>
     <string name="welcome_body">Con esta aplicación podrás ver los marcadores en tiempo real de cualquier deporte. A continuación, vamos a seleccionar tus preferencias como ligas , equipos favoritos, etc..</string>
     <string name="home">Home</string>

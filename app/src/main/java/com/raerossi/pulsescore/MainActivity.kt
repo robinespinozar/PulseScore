@@ -37,7 +37,7 @@ import com.raerossi.pulsescore.composeutils.TitleAndDescription
 import com.raerossi.pulsescore.ui.navigation.Routes
 import com.raerossi.pulsescore.ui.navigation.SetUpNavHost
 import com.raerossi.pulsescore.ui.theme.PulseScoreTheme
-import com.raerossi.pulsescore.utils.PreferencePage
+import com.raerossi.pulsescore.utils.PreferenceScreen
 import com.raerossi.pulsescore.views.login.LoginBody
 import com.raerossi.pulsescore.views.preferences.PreferenceScreen
 import com.raerossi.pulsescore.views.preferences.convertTeamToPreference
@@ -54,7 +54,8 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 SetUpNavHost(
                     navigationController = navController,
-                    startDestination = Routes.OnBoardingScreen.route
+                    startDestination = Routes.OnBoardingScreen.route,
+                    context = this
                 )
             }
         }

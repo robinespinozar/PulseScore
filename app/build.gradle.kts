@@ -77,4 +77,7 @@ dependencies {
 
     //StatusBar - Accompanist
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
+
+    // DataStore Preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }
