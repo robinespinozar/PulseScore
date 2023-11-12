@@ -76,6 +76,7 @@ val md_theme_ref_neutral95 = Color(0xFFEFF1F1)
 
 val md_theme_ref_neutralVariant_40 = Color(0xFF566060)
 val md_theme_ref_neutralVariant_80 = Color(0xFFBEC9C7)
+val md_theme_ref_neutralVariant_90 = Color(0xFFDAE5E3)
 val md_theme_ref_neutralVariant_95 = Color(0xFFE8F3F2)
 
 val md_light_title = Color(0xFF0C212C)

@@ -112,6 +112,9 @@ get() = md_theme_ref_neutralVariant_40
 val ColorScheme.neutralVariant80: Color @Composable
 get() = md_theme_ref_neutralVariant_80
 
+val ColorScheme.neutralVariant90: Color @Composable
+get() = md_theme_ref_neutralVariant_90
+
 val ColorScheme.neutralVariant95: Color @Composable
 get() = md_theme_ref_neutralVariant_95
 

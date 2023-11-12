@@ -24,12 +24,15 @@ import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.PagerState
 import com.google.accompanist.pager.rememberPagerState
+import com.raerossi.pulsescore.composeutils.PageIndicator
 import com.raerossi.pulsescore.composeutils.PrimaryButton
 import com.raerossi.pulsescore.composeutils.TitleAndDescription
 import com.raerossi.pulsescore.composeutils.VerticalSpacer
 import com.raerossi.pulsescore.ui.features.onboarding.OnBoardingViewModel
 import com.raerossi.pulsescore.ui.navigation.Routes
 import com.raerossi.pulsescore.ui.theme.PulseScoreTheme
+import com.raerossi.pulsescore.ui.theme.neutral95
+import com.raerossi.pulsescore.ui.theme.neutralVariant90
 import com.raerossi.pulsescore.ui.theme.neutralVariant95
 import com.raerossi.pulsescore.ui.theme.primary50
 import com.raerossi.pulsescore.utils.OnBoardingPage
@@ -56,13 +59,14 @@ fun OnBoardingScreen(
         ) { position ->
             PagerScreen(onBoardingPage = pages[position])
         }
-        HorizontalPagerIndicator(
+        PageIndicator(
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
                 .weight(1f),
-            activeColor = MaterialTheme.colorScheme.primary50,
-            inactiveColor = MaterialTheme.colorScheme.neutralVariant95,
-            pagerState = pagerState
+            numberOfPages = pages.size,
+            selectedColor = MaterialTheme.colorScheme.primary50,
+            inactiveColor =  MaterialTheme.colorScheme.neutralVariant90,
+            selectedPage = pagerState.currentPage
         )
         FinishButton(
             modifier = Modifier.weight(1f),
