@@ -30,10 +30,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.raerossi.pulsescore.composeutils.ProgressTopBar
 import com.raerossi.pulsescore.composeutils.TitleAndDescription
+import com.raerossi.pulsescore.ui.features.splash.SplashViewModel
 import com.raerossi.pulsescore.ui.navigation.Routes
 import com.raerossi.pulsescore.ui.navigation.SetUpNavHost
 import com.raerossi.pulsescore.ui.theme.PulseScoreTheme
@@ -48,13 +50,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val splashViewModel = SplashViewModel(this)
+
+        installSplashScreen().setKeepOnScreenCondition {
+            !splashViewModel.isLoading.value
+        }
+
         setContent {
             PulseScoreTheme {
                 SetStatusBarColor(Color(0xFFFCFCFC))
+
+                val startScreen by splashViewModel.startDestination
                 val navController = rememberNavController()
+
                 SetUpNavHost(
                     navigationController = navController,
-                    startDestination = Routes.OnBoardingScreen.route,
+                    startDestination = startScreen,
                     context = this
                 )
             }

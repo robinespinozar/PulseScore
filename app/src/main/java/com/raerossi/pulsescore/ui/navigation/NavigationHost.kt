@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.raerossi.pulsescore.ui.features.home.HomeScreen
 import com.raerossi.pulsescore.ui.features.onboarding.OnBoardingViewModel
 import com.raerossi.pulsescore.utils.PreferenceScreen
 import com.raerossi.pulsescore.views.login.LoginScreen
@@ -32,6 +33,9 @@ fun SetUpNavHost(
         composable(Routes.OnBoardingScreen.route) {
             val onBoardingViewModel = OnBoardingViewModel(context)
             OnBoardingScreen(navController = navigationController,onBoardingViewModel = onBoardingViewModel)
+        }
+        composable(Routes.HomeScreen.route) {
+            HomeScreen()
         }
         composable(Routes.WelcomeScreen.route) {
             WelcomeScreen(navController = navigationController)

@@ -2,4 +2,12 @@
 <resources>
 
     <style name="Theme.PulseScore" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.SplashScreen.MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen_logo</item>
+        <item name="windowSplashScreenAnimationDuration">700</item>
+        <item name="postSplashScreenTheme">@style/Theme.PulseScore</item>
+    </style>
+
 </resources>

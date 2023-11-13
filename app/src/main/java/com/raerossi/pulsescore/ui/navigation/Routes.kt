@@ -5,6 +5,7 @@ sealed class Routes(
 ) {
     object LoginScreen: Routes(route = "login_screen")
     object OnBoardingScreen: Routes(route = "onboarding_screen")
+    object HomeScreen: Routes(route = "home_screen")
     object WelcomeScreen: Routes(route = "welcome_screen")
     object PreferencesTeamsScreen: Routes(route = "preferences_teams_screen")
     object PreferencesNotificationsScreen: Routes(route = "preferences_notifications_screen")

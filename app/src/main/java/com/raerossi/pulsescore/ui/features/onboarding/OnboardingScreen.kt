@@ -75,7 +75,7 @@ fun OnBoardingScreen(
         {
             onBoardingViewModel.saveOnBoardingState(completed = true)
             navController.popBackStack()
-            navController.navigate(Routes.WelcomeScreen.route)
+            navController.navigate(Routes.HomeScreen.route)
         }
     }
 }
