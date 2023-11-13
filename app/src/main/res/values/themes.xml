@@ -6,7 +6,7 @@
     <style name="Theme.SplashScreen.MySplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen_logo</item>
-        <item name="windowSplashScreenAnimationDuration">700</item>
+        <item name="windowSplashScreenAnimationDuration">800</item>
         <item name="postSplashScreenTheme">@style/Theme.PulseScore</item>
     </style>
 
